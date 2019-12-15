@@ -60,6 +60,14 @@
   }
 }
 
-.powered-by, .theme-info {
+.powered-by,
+.theme-info {
   display: inline-block;
+  margin-right: 10px;
+
+  &::after {
+    content: "|";
+    padding-left: 10px;
+  }
 }
+

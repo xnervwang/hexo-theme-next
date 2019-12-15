@@ -16,6 +16,9 @@
 
     {%- if post.header !== false %}
       <header class="post-header">
+
+        {%- if post.hide_meta !== "hide" %}
+
         <{%- if theme.seo %}h2{% else %}h1{%- endif %} class="post-title{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="name headline">
           {# Link posts #}
           {%- if post.link %}
@@ -75,6 +78,8 @@
                 <time title="{{ __('post.modified') + __('symbol.colon') + full_date(post.updated) }}" itemprop="dateModified" datetime="{{ moment(post.updated).format() }}">{{ date(post.updated) }}</time>
               </span>
             {%- endif %}
+          {%- endif %}
+
           {%- endif %}
 
           {%- if post.categories and post.categories.length and theme.post_meta.categories %}
@@ -250,6 +255,8 @@
 
         {{ partial('_partials/post/post-footer.swig', {}, {cache: theme.cache.enable}) }}
 
+        {%- if post.hide_title === "hide" %}
+
         {%- if post.prev or post.next %}
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
@@ -270,6 +277,8 @@
               {%- endif %}
             </div>
           </div>
+        {%- endif %}
+
         {%- endif %}
       </footer>
     {% else %}

@@ -44,7 +44,7 @@
 
 {%- if theme.footer.powered.enable %}
   <div class="powered-by">
-    {{- __('footer.powered', next_url('https://hexo.io', 'Hexo', {class: 'theme-link'})) }}
+    {{- __('footer.powered', next_url('https://i.xnerv.wang', 'xnervwang', {class: 'theme-link'})) }}
     {%- if theme.footer.powered.version %} v{{ hexo_version }}{%- endif %}
   </div>
 {%- endif %}
@@ -55,7 +55,7 @@
 
 {%- if theme.footer.theme.enable %}
   <div class="theme-info">
-    {%- set next_site = 'https://theme-next.org' %}
+    {%- set next_site = 'https://xnerv.wang' %}
     {%- if theme.scheme !== 'Gemini' %}
       {%- set next_site = 'https://' + theme.scheme.toLowerCase() + '.theme-next.org' %}
     {%- endif %}

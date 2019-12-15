@@ -14,6 +14,7 @@ menu:
   schedule: 日程表
   sitemap: 站点地图
   commonweal: 公益 404
+  leetcode: LeetCode
 sidebar:
   overview: 站点概览
   toc: 文章目录
@@ -40,7 +41,7 @@ page:
   tags: 标签
 footer:
   powered: "由 %s 强力驱动"
-  theme: 主题
+  theme: 前往
   total_views: 总访问量
   total_visitors: 总访客量
 counter:

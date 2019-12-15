@@ -1,9 +1,11 @@
 <header class="post-header">
 
+{%- if page.hidden_title != true %}
 <{%- if theme.seo %}h2{% else %}h1{%- endif %} class="post-title" itemprop="name headline">
   {{- page.title }}
   {{- post_edit(page.source) }}
 </{%- if theme.seo %}h2{% else %}h1{%- endif %}>
+{% endif %}
 
 <div class="post-meta">
   {%- if page.description %}
